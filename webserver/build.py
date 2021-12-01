@@ -9,9 +9,9 @@ CORS(app, supports_credentials=True)
 app.secret_key = 'dljsaklqk24e21cjn!Ew@@dsa5'
 socket = SocketIO(app, cors_allowed_origins="*")
 
-# change this so rhat you can connect to your own redis server
+# change this so that you can connect to your own redis server
 # ===============================================
-redis_server = redis.Redis("YOUR_REDIS_SERVER")
+redis_server = redis.Redis(host='127.0.0.1', port=6379)
 # ===============================================
 
 # Translate OSM coordinate (longitude, latitude) to SVG coordinates (x,y).
